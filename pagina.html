@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visión Local - Impulso Digital para Negocios</title>
+    <!-- Incluyendo Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Animación para el Hero */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 90%;
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: #aaa;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .package-title-card {
+            font-size: 1.75rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-100 text-gray-800">
+
+    <!-- Navbar / Header -->
+    <header class="bg-white shadow-lg p-4 md:p-6 flex justify-center items-center sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- Reemplaza el 'src' con la URL de tu logo -->
+                <img src="logo.png" alt="Visión Local Logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full shadow-md">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Visión Local</h1>
+            </div>
+            <a href="#paquetes" class="px-5 py-2 md:px-6 md:py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-colors duration-300">
+                Ver Paquetes
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto p-4 md:p-8">
+        <section class="text-center my-12 md:my-20 fade-in-up">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
+                ¡Impulsamos el éxito de tu negocio!
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto">
+                Visión Local ayuda a que tu negocio sea visto, recordado y crezca. Te ofrecemos soluciones de marketing digital y de identidad visual para que te conectes con tus clientes de forma efectiva.
+            </p>
+        </section>
+
+        <!-- Paquetes Section -->
+        <section id="paquetes" class="grid md:grid-cols-3 gap-8 md:gap-12 mt-12 md:mt-16">
+
+            <!-- Paquete Primer Impacto -->
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <div class="w-full flex justify-center mb-6">
+                    <div class="package-title-card text-green-600">
+                        <p>Hazte</p>
+                        <p>Visible</p>
+                    </div>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-green-700 mb-2">Paquete “Primer Impacto”</h3>
+                <p class="text-xl md:text-2xl font-semibold mb-4 text-gray-900">$500 MXN mensuales</p>
+                <p class="text-base text-gray-600 mb-6">
+                    ¿Quieres que tu negocio se dé a conocer en Tequisquiapan? Con este paquete, te ayudamos a crear una imagen profesional y te conectamos con tus primeros clientes.
+                </p>
+                <ul class="text-left text-sm md:text-base text-gray-700 space-y-3 w-full">
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Logo listo para usar (1 propuesta + 1 revisión)</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Tarjetas de presentación simples</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Publicación en 15 grupos locales de Facebook</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Diseño de publicación atractivo</li>
+                </ul>
+                <button onclick="openModal('Primer Impacto')" class="mt-auto px-6 py-3 bg-green-500 text-white font-bold rounded-full hover:bg-green-600 transition-colors duration-300 transform hover:scale-105">¡Contáctanos!</button>
+            </div>
+
+            <!-- Paquete Visibilidad Local -->
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <div class="w-full flex justify-center mb-6">
+                    <div class="package-title-card text-blue-600">
+                        <p>Atrae</p>
+                        <p>Clientes</p>
+                    </div>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-blue-700 mb-2">Paquete “Visibilidad Local”</h3>
+                <p class="text-xl md:text-2xl font-semibold mb-4 text-gray-900">$1,100 MXN mensuales</p>
+                <p class="text-base text-gray-600 mb-6">
+                    Este paquete está diseñado para negocios que buscan consolidar su presencia en línea y generar más interacción con sus clientes.
+                </p>
+                <ul class="text-left text-sm md:text-base text-gray-700 space-y-3 w-full">
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Logo con estilo propio (2 propuestas + revisiones)</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Tarjetas de presentación profesionales</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Publicación en 25 grupos locales de Facebook</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Comunicación en redes (responder mensajes)</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-blue-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Publicaciones con coherencia</li>
+                </ul>
+                <button onclick="openModal('Visibilidad Local')" class="mt-auto px-6 py-3 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600 transition-colors duration-300 transform hover:scale-105">¡Contáctanos!</button>
+            </div>
+
+            <!-- Paquete Impulso Total -->
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <div class="w-full flex justify-center mb-6">
+                    <div class="package-title-card text-purple-600">
+                        <p>Domina el</p>
+                        <p>Mercado</p>
+                    </div>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-purple-700 mb-2">Paquete “Impulso Total”</h3>
+                <p class="text-xl md:text-2xl font-semibold mb-4 text-gray-900">$2,000 MXN mensuales</p>
+                <p class="text-base text-gray-600 mb-6">
+                    Ideal para negocios que quieren crecer a lo grande. Con este plan, tu negocio recibirá un impulso completo para destacar y dominar la conversación digital en Tequisquiapan.
+                </p>
+                <ul class="text-left text-sm md:text-base text-gray-700 space-y-3 w-full">
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Identidad de marca profesional</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Publicidad que funciona</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Máximo alcance local (35 grupos)</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Gestión de mensajes y comentarios</li>
+                    <li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-1 text-purple-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>Reporte mensual con métricas</li>
+                </ul>
+                <button onclick="openModal('Impulso Total')" class="mt-auto px-6 py-3 bg-purple-500 text-white font-bold rounded-full hover:bg-purple-600 transition-colors duration-300 transform hover:scale-105">¡Contáctanos!</button>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Modal de Contacto -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content text-center">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3 class="text-2xl font-bold mb-4">¡Listo para crecer!</h3>
+            <p id="modalText" class="text-lg text-gray-700 mb-6">
+                Te guiaremos para que tu negocio brille.
+            </p>
+            <!-- Reemplaza "tunumero" con tu número de WhatsApp con código de país -->
+            <a id="whatsappLink" href="" target="_blank" class="inline-block px-8 py-4 bg-green-500 text-white font-bold rounded-full text-lg hover:bg-green-600 transition-colors duration-300">
+                Contactar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-12 md:mt-16 text-center">
+        <p class="text-sm md:text-base">&copy; 2024 Visión Local. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para abrir el modal con el texto correcto
+        function openModal(packageName) {
+            const modal = document.getElementById('contactModal');
+            const modalText = document.getElementById('modalText');
+            const whatsappLink = document.getElementById('whatsappLink');
+            const phoneNumber = '524141019672'; // <-- Reemplaza con tu número completo de WhatsApp
+
+            let message = `Hola, me interesa el paquete ${packageName}.`;
+            modalText.innerHTML = `Me interesa el paquete **${packageName}**.`;
+            whatsappLink.href = `https://wa.me/${4141183032}?text=${encodeURIComponent(message)}`;
+            
+            modal.style.display = 'flex';
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            const modal = document.getElementById('contactModal');
+            modal.style.display = 'none';
+        }
+
+        // Cierra el modal si se hace clic fuera de él
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
